@@ -81,10 +81,52 @@ let combinedAddress = myAddress + myAddressNumber + granyAddress + hisAddressNum
 // Repetir el punto anterior utilizando una estrategia diferente.
 let combinedAddress = myAddress.concat(myAddressNumber, ", ", granyAddress, hisAddressNumber);
 // Crear dos variables de tipo number.
-
 // Crear cuatro nuevas variables de tipo boolean comparando los dos valores utilizando operadores de comparación.
+let numero1 = 10;
+let numero2 = 5;
+
+let esIgual = numero1 === numero2; // false, porque 10 no es igual a 5
+let esDistinto = numero1 !== numero2; // true, porque 10 es distinto de 5
+let esMayor = numero1 > numero2; // true, porque 10 es mayor que 5
+let esMenorOIgual = numero1 <= numero2; // false, porque 10 no es menor o igual a 5
+
 // Declarar cinco variables de tipo string cuyo valor contenga operaciones aritméticas. Intenta utilizar diferentes estrategias. 
+// Variables de tipo string con operaciones aritméticas
+let operacion1 = "5 + 3 = " + (5 + 3);  // "5 + 3 = 8"
+let operacion2 = "10 - 4 = " + (10 - 4);  // "10 - 4 = 6"
+let operacion3 = "7 * 2 = " + (7 * 2);    // "7 * 2 = 14"
+let operacion4 = "20 / 4 = " + (20 / 4);  // "20 / 4 = 5"
+let operacion5 = "5^2 = " + Math.pow(5, 2); // "5^2 = 25"
+
 // Crea un bloque de código que, utilizando variables con nombres representativos, calcule la cantidad de propina a dejar en un restaurante, basada en el total de la cuenta y el porcentaje de propina ingresado por el usuario.
+
+let totalCuenta = 100; // Monto total de la cuenta
+let porcentajePropina = 15; // Porcentaje de propina
+
+let cantidadPropina = (totalCuenta * porcentajePropina) / 100;
+let totalConPropina = totalCuenta + cantidadPropina;
+
+
 // Crea un bloque de código que calcule el precio final de un producto luego de aplicar un descuento. 
+let precioOriginal = 200; // Precio original del producto
+let porcentajeDescuento = 10; // Porcentaje de descuento
+
+let descuento = (precioOriginal * porcentajeDescuento) / 100;
+let precioFinal = precioOriginal - descuento;
+
+
 // Crea un bloque de código que, tomando el año de nacimiento de una persona, devuelva su edad actual.
+let anoNacimiento = 1990; // Año de nacimiento de la persona
+let anoActual = new Date().getFullYear(); // Año actual
+
+let edadActual = anoActual - anoNacimiento;
 // Crea un bloque de código que, definiendo las variables necesarias, calcule el área de un círculo, un cuadrado y un triángulo.
+
+let radioCirculo = 5; // Radio del círculo
+let ladoCuadrado = 4; // Lado del cuadrado
+let baseTriangulo = 6; // Base del triángulo
+let alturaTriangulo = 3; // Altura del triángulo
+
+let areaCirculo = Math.PI * Math.pow(radioCirculo, 2);
+let areaCuadrado = Math.pow(ladoCuadrado, 2);
+let areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
