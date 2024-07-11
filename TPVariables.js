@@ -44,8 +44,8 @@ let cuenta = balance + money;
 
 // Declarar una variable de tipo booleano cuyo nombre represente su valor. Luego declarar una nueva variable cuyo valor sea opuesto a la variable previamente creada.
 
-let esMayordeEdad <= 18;
-let esMenordeEdad >= 18;
+let esVerdad = true;
+let noEsVerdad = !esVerdad;
 
 //Crear una variable de tipo number. 
 let herAge = 20;
@@ -117,7 +117,7 @@ let precioFinal = precioOriginal - descuento;
 
 // Crea un bloque de código que, tomando el año de nacimiento de una persona, devuelva su edad actual.
 let anoNacimiento = 1990; // Año de nacimiento de la persona
-let anoActual = new Date().getFullYear(); // Año actual
+let anoActual = 2024; // Año actual
 
 let edadActual = anoActual - anoNacimiento;
 // Crea un bloque de código que, definiendo las variables necesarias, calcule el área de un círculo, un cuadrado y un triángulo.
