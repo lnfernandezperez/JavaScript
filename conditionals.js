@@ -284,21 +284,271 @@ switch (genero) {
 }
 
 Crea un bloque de código que reciba un número del 1 al 10. Utiliza switch para imprimir en consola ‘Uno’, ‘Dos’, ‘Tres’, o ‘Mayor a 3’, según corresponda. 
+
+let numero = 5;
+
+switch (numero) {
+    case 1:
+        console.log('Uno');
+        break;
+    case 2:
+        console.log('Dos');
+        break;
+    case 3:
+        console.log('Tres');
+        break;
+    default:
+        console.log('Mayor a 3');
+}
+
 Crea un bloque de código que tome de referencia una letra. Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
+
+let letra = 'a';
+
+
+switch (letra.toLowerCase()) { 
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        console.log('Es una vocal');
+        break;
+    case 'b':
+    case 'c':
+    case 'd':
+    case 'f':
+    case 'g':
+    case 'h':
+    case 'j':
+    case 'k':
+    case 'l':
+    case 'm':
+    case 'n':
+    case 'p':
+    case 'q':
+    case 'r':
+    case 's':
+    case 't':
+    case 'v':
+    case 'w':
+    case 'x':
+    case 'y':
+    case 'z':
+        console.log('Es una consonante');
+        break;
+    default:
+        console.log('Es un carácter especial');
+}
+
 Crea un bloque de código que tome de referencia un número del 1 al 4. Utiliza switch para imprimir en consola la estación del año correspondiente.
+
+let numeroEstacion = 4;
+
+switch (numeroEstacion) {
+    case 1:
+        console.log('Primavera');
+        break;
+    case 2:
+        console.log('Verano');
+        break;
+    case 3:
+        console.log('Otoño');
+        break;
+    case 4:
+        console.log('Invierno');
+        break;
+    default:
+        console.log('Número no válido');
+}
 
 
 Operador ternario:
 
 Crea un bloque de código que tome de referencia una variable ‘edad’. Utiliza el operador ternario para imprimir en consola si es o no mayor de edad.
+
+let edad = 18;
+
+console.log(edad >= 18 ? 'Es mayor de edad' : 'No es mayor de edad');
+
 Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es par o impar y muestra el resultado en consola.
+
+let numero = 7;
+
+console.log(numero % 2 === 0 ? 'El número es par' : 'El número es impar');
+
+
 Crea un bloque de código que tome de referencia dos números y utilice el operador ternario para determinar cual de los dos es el mayor. Luego imprime en consola el resultado.
+
+let numero1 = 10;
+let numero2 = 20;
+
+console.log(numero1 > numero2 ? `El número mayor es ${numero1}` : `El número mayor es ${numero2}`);
+
 Crea un bloque de código que tome de referencia un número del 1 al 7 y utilice el operador ternario para imprimir en consola el día de la semana correspondiente.
+
+let numeroDia = 3;
+
+console.log(
+  numeroDia === 1 ? 'Lunes' :
+  numeroDia === 2 ? 'Martes' :
+  numeroDia === 3 ? 'Miércoles' :
+  numeroDia === 4 ? 'Jueves' :
+  numeroDia === 5 ? 'Viernes' :
+  numeroDia === 6 ? 'Sábado' :
+  numeroDia === 7 ? 'Domingo' :
+  'Número no válido'
+);
+
 Crea un bloque de código que tome de referencia un número. Utiliza el operador ternario para determinar si es positivo, negativo o cero e imprime el resultado en consola.
+let numero = -5;
+
+console.log(
+  numero > 0 ? 'El número es positivo' :
+  numero < 0 ? 'El número es negativo' :
+  'El número es cero'
+);
+
 Crea un bloque de código que tome de referencia un número del 1 al 100 y utilice el operador ternario para determinar si es múltiplo de 3 y 5 para imprimir el resultado en consola.
+
+let numero = 30;
+
+
+console.log(
+  numero % 3 === 0 && numero % 5 === 0 ? 'El número es múltiplo de 3 y 5' :
+  'El número no es múltiplo de 3 y 5'
+);
+
 
 Prácticas: 
 
 Crea un bloque de código que tome de referencia un número del 1 al 100 y, utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 incluyendo las diferentes combinaciones posibles.
+
+let numero = 30;
+
+if (numero % 2 === 0 && numero % 3 === 0 && numero % 5 === 0) {
+    console.log('El número es múltiplo de 2, 3 y 5.');
+} else if (numero % 2 === 0 && numero % 3 === 0) {
+    console.log('El número es múltiplo de 2 y 3.');
+} else if (numero % 2 === 0 && numero % 5 === 0) {
+    console.log('El número es múltiplo de 2 y 5.');
+} else if (numero % 3 === 0 && numero % 5 === 0) {
+    console.log('El número es múltiplo de 3 y 5.');
+} else if (numero % 2 === 0) {
+    console.log('El número es múltiplo de 2.');
+} else if (numero % 3 === 0) {
+    console.log('El número es múltiplo de 3.');
+} else if (numero % 5 === 0) {
+    console.log('El número es múltiplo de 5.');
+} else {
+    console.log('El número no es múltiplo de 2, 3 ni 5.');
+}
+
 Crea un bloque de código que reciba un numero del 1 al 1000. Utiliza el tipo de condicional que prefieras para imprimir en consola si el numero es par o impar, si es divisible por 2, por 3 o por 5, y si es mayor o menor a 50.
+
+let numero = 123;
+
+if (numero % 2 === 0) {
+    console.log('El número es par.');
+} else {
+    console.log('El número es impar.');
+}
+
+if (numero % 2 === 0) {
+    console.log('El número es divisible por 2.');
+}
+if (numero % 3 === 0) {
+    console.log('El número es divisible por 3.');
+}
+if (numero % 5 === 0) {
+    console.log('El número es divisible por 5.');
+}
+
+if (numero > 50) {
+    console.log('El número es mayor a 50.');
+} else if (numero < 50) {
+    console.log('El número es menor a 50.');
+} else {
+    console.log('El número es igual a 50.');
+}
+
 Desarrolla 10 nuevas situaciones en donde requieras de utilizar condicionales para su resolución.
+
+Si un año es bisiesto:
+let year = 2024;
+if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+    console.log('El año es bisiesto.');
+} else {
+    console.log('El año no es bisiesto.');
+}
+Determinar el rango de una temperatura:
+
+let temperatura = 15;
+if (temperatura <= 0) {
+    console.log('Hace mucho frío.');
+} else if (temperatura <= 15) {
+    console.log('Hace frío.');
+} else if (temperatura <= 25) {
+    console.log('El clima es templado.');
+} else {
+    console.log('Hace calor.');
+}
+
+
+Determinar el tipo de triángulo por sus lados:
+
+let lado1 = 3;
+let lado2 = 4;
+let lado3 = 5;
+
+if (lado1 === lado2 && lado2 === lado3) {
+    console.log('El triángulo es equilátero.');
+} else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {
+    console.log('El triángulo es isósceles.');
+} else {
+    console.log('El triángulo es escaleno.');
+}
+
+
+Determinar si una contraseña es buena:
+
+let password = 'P@ssw0rd!';
+if (password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*()_+]/.test(password)) {
+    console.log('La contraseña es segura.');
+} else {
+    console.log('La contraseña no es segura.');
+}
+
+Calcular el precio final después de aplicar un descuento:
+
+let precioOriginal = 100;
+let descuento = 15; // en porcentaje
+let precioFinal = precioOriginal - (precioOriginal * descuento / 100);
+console.log('El precio final después del descuento es:', precioFinal);
+
+Clasificar una persona según su altura:
+
+let altura = 1.75; // en metros
+if (altura < 1.50) {
+    console.log('Persona de baja estatura.');
+} else if (altura <= 1.80) {
+    console.log('Persona de estatura media.');
+} else {
+    console.log('Persona de alta estatura.');
+}
+
+Determinar el grado académico según la calificación:
+
+let calificacion = 85;
+if (calificacion >= 90) {
+    console.log('A');
+} else if (calificacion >= 80) {
+    console.log('B');
+} else if (calificacion >= 70) {
+    console.log('C');
+} else if (calificacion >= 60) {
+    console.log('D');
+} else {
+    console.log('F');
+}
+
