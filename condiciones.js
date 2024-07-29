@@ -100,8 +100,6 @@ Crea una función que tome de referencia una variable string cuyo valor sea una 
 
 let letra = 'e';
 
-letra = letra.toLowerCase();
-
 const vocales = ['a', 'e', 'i', 'o', 'u'];
 
 if (vocales.includes(letra)) {
