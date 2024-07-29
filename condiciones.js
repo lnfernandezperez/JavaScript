@@ -202,10 +202,9 @@ if (numero % 2 === 0 && numero % 3 === 0) {
 
 Crea un bloque de código que tome de referencia un número del 1 al 12 y devuelva el mes correspondiente. Por ejemplo: 1 = ‘Enero’.
 
-// Definir el número de referencia
+
 let numero = 5;
 
-// Determinar el mes corres
 let mes;
 if (numero === 1) {
     mes = 'Enero';
