@@ -519,12 +519,7 @@ if (password.length >= 8 && /[A-Z]/.test(password) && /[0-9]/.test(password) && 
     console.log('La contraseña no es segura.');
 }
 
-Calcular el precio final después de aplicar un descuento:
 
-let precioOriginal = 100;
-let descuento = 15; // en porcentaje
-let precioFinal = precioOriginal - (precioOriginal * descuento / 100);
-console.log('El precio final después del descuento es:', precioFinal);
 
 Clasificar una persona según su altura:
 
