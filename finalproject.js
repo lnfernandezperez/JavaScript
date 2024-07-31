@@ -66,7 +66,7 @@ function gestionarPedido(cliente) {
     console.log(`Costo final del pedido: $${costoFinal.toFixed(2)}`);
 }
 
-// Ejemplo de uso de la función
+
 const cliente = {
     nombre: 'Juan',
     edad: 65,
@@ -75,7 +75,7 @@ const cliente = {
         precioUnitario: 150
     },
     metodoPago: 'Efectivo',
-    horaPedido: '2024-07-31T13:30:00'
+    horaPedido: ''
 };
 
 gestionarPedido(cliente);
