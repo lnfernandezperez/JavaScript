@@ -36,6 +36,7 @@ function saludarCliente(nombre) {
     }
 
     function verificarEdad(edad) {
+        
         if (edad < 18) {
             console.log("Advertencia: No puedes consumir bebidas alcohólicas.");
         }
@@ -44,6 +45,8 @@ function saludarCliente(nombre) {
         switch(producto.toLowerCase()){
             case "manzanas":
                 console.log('${cantidad} de manzanas')
+            case "naranjas":
+                console.log('${cantidad} de naranjas')
         }
     
 }
