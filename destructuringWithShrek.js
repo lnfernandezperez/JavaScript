@@ -83,7 +83,7 @@ let character4 = {
     )]
 }
 
-let {nombre, especie, amigos:[{nombre: primerAmigo},{nombre: segundoAmigo}]} = character4
+// let {nombre, especie, amigos:[{nombre: primerAmigo},{nombre: segundoAmigo}]} = character4
 
 // Crear un objeto pelicula con las propiedades titulo, año, y personajes (que es un array de objetos con propiedades nombre, especie, y rol). Luego extraer el título de la película y los nombres de los personajes principales (aquellos cuyo rol sea 'principal').
 let pelicula = {
@@ -103,22 +103,132 @@ let pelicula = {
     ]
 }
 
-let { titulo, personajes: personajesNombres} = pelicula
+let { titulo, personajes: personajes1} = pelicula
 
-personajesNombres = personajesNombres.filter(function(personaje){
-    return personaje.ro
-}
+personajes1 = personajes1.filter(function(personaje){
+    return personaje.rol == "principal";
+});
+let personajesNombres = [];
+personajes1.map(function (personaje) {
+    personajesNombres.push(personaje.name);
+});
 
 
 // Crear un objeto misiones con las propiedades titulo, año, y detalles (que es un objeto con propiedades misionPrincipal y misionSecundaria, ambos con propiedades descripcion y personajes (que es un array de nombres)). Luego extraer la descripción de la misión principal y los nombres de los personajes de la misión secundaria.
+
+let objeto = {
+    titulo: "Garfield",
+    ano: "2009",
+    detalles: {
+        misionPrincipal:{
+            descripcion:"Comerse todo",
+            personajes:["personaje1","personaje2","personaje3"]
+        },
+        misionSecundaria:{
+            descripcion:"No ser atrapado",
+            personajes:["personaje1","personaje2","personaje3"]
+        }
+    }
+}
+
+let { detalles:{misionPrincipal:{descripcion}}, detalles:{misionSecundaria:{personajes}}} = objeto
+
 // Crear un objeto evento con las propiedades nombre, fecha, y invitados (que es un array de objetos con propiedades nombre, especie, y confirmado (booleano)). Luego extraer el nombre del evento y los nombres de los invitados confirmados.
-// Crear un objeto banda con las propiedades nombre, genero, y miembros (que es un array de objetos con propiedades nombre, instrumento, y experiencia (en años)). Luego extraer el nombre del género y los instrumentos de los miembros con más de 5 años de experiencia.
+let evento = {
+    nombre: "Mi cumple",
+    fecha: "07/11/2005",
+    invitados: [(invitado1 = {
+        nombre: "Lautaro",
+        especie: "Humano",
+        confirmado: true
+    }),(invitado2 = {
+        nombre: "Malena",
+        especie: "Humano",
+        confirmado: false
+    })]
+}
+
+let { nombre, invitados: invitadosC } = evento
+
+invitadosC = invitadosC.filter(function(invitado){
+    return invitado.confirmado == true ;
+});
+let invitadosConfirmados = [];
+invitadosC.map(function (invitado) {
+    invitadosConfirmados.push(invitado.nombre);
+});
+
+
+// Crear un objeto banda con las propiedades nombre, genero, y miembros (que es un array de objetos con propiedades nombre, instrumento, y experiencia (en años)).
+//  Luego extraer el nombre del género y los instrumentos de los miembros con más de 5 años de experiencia.
+
+
+let banda = {
+    nombre:"Imagine Dragons",
+    genero:"pop-rock",
+    miembros: [(miembro1 = {
+        nombre:"Dan Reynolds",
+        instrumento:"Piano",
+        experiencia: 15,
+    }),(miembro2 = {
+        nombre:"Daniel Platzman",
+        instrumento:"Bateria",
+        experiencia: 13,
+    })]
+}
+
+let {genero, miembros } = banda
+
+miembros = miembros.filter(function(miembro){
+    return miembro.experiencia > 5;
+});
+
+let miembrosExperimentados = [];
+miembros.map(function(miembro){
+    miembrosExperimentados.push(miembro.nombre);
+})
+
 
 // Parte 3
 
 // Crear una función crearPareja que reciba dos objetos ogro y princesa y devuelva un nuevo objeto pareja combinando sus propiedades, renombrando nombre a nombreOgro y nombrePrincesa. Además, si la edad de cualquiera de ellos es mayor a 28, agregar un array misiones con una misión inicial.
-// Crear una función crearRealeza que reciba dos objetos rey y reina y devuelva un nuevo objeto realeza combinando sus propiedades, renombrando nombre a nombreRey y nombreReina, y poder a poderRey y poderReina. Además, si los reinos son iguales, agregar un array herederos con un heredero inicial.
+let ogro = {
+    name: "Shrek",
+    age: 30
+}
+let princesa = {
+    name: "Fiona",
+    age: 31
+}
+function crearPareja(ogro, princesa){
+    let { name: ogroName, age: ogroAge} = ogro;
+    let { name: princesaName, age: princesaAge} = princesa;
+    let pareja = {ogroName, ogroAge, princesaName, princesaAge};
+    if (verEdad(pareja)){
+        pareja = anadirMision(pareja);
+    }
+    return pareja;
+}
+
+function anadirMision(pareja){
+    pareja.mision = ["Mision Nueva"];
+    return pareja
+}
+
+function verEdad({ogroAge, princesaAge}){
+    return ogroAge > 18 || princesaAge > 18;
+}
+
 // Crear una función unirPersonajes que reciba un array de objetos personajes y devuelva un nuevo objeto alianza con propiedades nombres (un array de los nombres de los personajes) y reinos (un array de los reinos de los personajes). Además, si cualquier personaje pertenece al reino 'Pantano', agregar 'Pantano' a un array lugaresImportantes.
+let personajes3 = [
+    { nombre: 'Shrek', reino: 'Pantano' },
+    { nombre: 'Fiona', reino: 'Duloc' },
+    { nombre: 'Burro', reino: 'Pantano' }
+  ];
+  
+function unirPersonajes(personajes3){
+
+}
 // Crear una función resumenPersonajes que reciba un array de objetos personajes donde cada objeto tiene una propiedad info que a su vez es un objeto con propiedades nombre, edad, y reino. Devuelve un nuevo objeto resumen con propiedades nombres (array de nombres) y edadesMayores (array de edades mayores a 30). Si algún personaje tiene edad mayor a 40, agregar 'mayoresDe40' a un array categorias.
 
 // Parte 4. Agregamos spread operator
