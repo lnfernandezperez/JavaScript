@@ -103,7 +103,7 @@ function findProductWithLetter(products, letter) {
   return products.find((product) => product.includes(letter));
 }
 
-let products = ["laptop", "cellphone", "tablet", "headphones"];
+let productss = ["laptop", "cellphone", "tablet", "headphones"];
 let letter = "e";
 
 let productWithLetter = findProductWithLetter(products, letter);
