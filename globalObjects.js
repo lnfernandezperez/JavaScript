@@ -132,7 +132,12 @@ let colores = [
     { nombre: "teal", rgb: "rgb(0, 128, 128)" },
     { nombre: "azul claro", rgb: "rgb(173, 216, 230)" } ];
 
-    function arraysColores({nombre, rgb}){
-
+    function colorExist(value, key) {
+        
+        if (!colores[0].hasOwnProperty(key)) {
+            return false;
+        }
+    
+        // Utilizamos el método some para verificar si existe el valor correspondiente a la key
+        return colores.find(color => color[value] === valor);
     }
-
