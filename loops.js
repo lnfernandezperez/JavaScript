@@ -188,16 +188,35 @@
 // ]);
 // console.log(resultExcercise6P2);
 
-
 // Escribe una función llamada contarGoles que reciba un array de goles anotados en un
 // partido. Cada elemento del array es un objeto que tiene dos propiedades: equipo y jugador.
 // Usa un bucle while para recorrer el array y contar cuántos goles anotó cada equipo.
-let goles=[{equipo: "Argentina", jugador:"lionel messi"}];
+// let goles=[{equipo: "Argentina", jugador:"lionel messi"},{equipo: "Brasil", jugador:"Neymar"}];
 
-function contarGoles(goles){
-    let n = 0
-    while(n < goles.length){
-        if ()
+// function contarGoles(goles){
+//     let n = 0
+//     let result = 0
+//     while(n < goles.length){
+//         if ()
+//     }
+
+// }
+
+// Crea una función llamada contarToques que reciba un array con el nombre de los
+// jugadores que tocan el balón en una jugada. Usa un bucle while para contar cuántos
+// toques hubo antes de que el balón saliera del campo. La jugada termina cuando encuentres
+// el string "fuera" en el array.
+// Ej del array:
+let jugada = ["Messi", "Di Maria", "Doye", "fuera"];
+
+function contarToques(jugada) {
+  let n = 0;
+  let toques = 0;
+  while (n < jugada.length) {
+    if (jugada[n] === "fuera") {
+      return toques;
     }
-
+    n++;
+  }
+  return toques;
 }
