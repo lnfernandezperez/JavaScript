@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+      .lists{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .list{
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-Do-List</h1>
+    <button class="createList">New List</button>
+    <section class="lists">
+      <section class="list">
+        <h2>My List</h2>
+        <ul class="listt">
+          <li>
+            <input type="checkbox" />Ir a claro a dar de baja el seguro de los
+            celulares
+          </li><button class="remove">x</button>
+          <li>
+            <input type="checkbox" />Averiguar para unirme a la obra social de
+            mi hermana
+          </li><button class="remove">x</button>
+          <li>
+            <input type="checkbox" />Ver cuanto es lo que tengo que tener
+            ahorrado antes de renunciara mi trabajo
+          </li><button class="remove">x</button>
+          <li>
+            <input type="checkbox" />Sobrevivir a la pasantia habiendo faltado 3
+            dias y dieron algo nuevo
+          </li><button class="remove">x</button>
+        </ul>
+        <input
+          type="text"
+          placeholder="Agregar una nueva tarea"
+          class="input1"
+        />
+        <button class="button1">Agregar</button>
+      </section>
+      <section class="list">
+        <h2>The 4 commandments</h2>
+        <ul class="listt">
+          <li><input type="checkbox" />Sleep</li><button class="remove">x</button>
+          <li><input type="checkbox" />Eat</li><button class="remove">x</button>
+          <li><input type="checkbox" />Code</li><button class="remove">x</button>
+          <li><input type="checkbox" />Repeat</li><button class="remove">x</button>
+        </ul>
+        <input
+          type="text"
+          placeholder="Agregar una nueva tarea"
+          class="input1"
+        />
+        <button class="button1">Agregar</button>
+      </section>
+    </section>
+    <script src="TPappFinal.js"></script>
+  </body>
+</html>
