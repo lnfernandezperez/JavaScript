@@ -6,7 +6,7 @@ let uls = document.querySelectorAll(".listt");
 function createNewItemInList(text) {
   let element = document.createElement("li");
   let input = document.createElement("input");
-  let button = 
+  let button = document.createElement("button")
   element.append(input);
   input.type = "checkbox";
   element.innerHTML += text;
@@ -15,13 +15,19 @@ function createNewItemInList(text) {
 }
 
 uls.forEach(function (ul, index) {
-  buttons[index].addEventListener("click", function () {
+  addButtons[index].addEventListener("click", function () {
     ul.append(createNewItemInList(inputs[index].value));
   });
 });
 
-let buttonsClear = document.querySelectorAll(".remove")
+let buttonsClear = document.querySelectorAll(".remove");
 
-function removeItemInList(){
-    let buttonClear = document.remove
+function removeItemInList() {
+  let buttonClear = document.remove();
 }
+
+buttonsClear.forEach(function (button) {
+  button.addEventListener("click", function () {
+    button.parentNode.remove();
+  });
+});
