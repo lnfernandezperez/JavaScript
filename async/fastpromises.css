@@ -1,0 +1,11 @@
+#contenedor{
+    text-align: center;
+}
+
+#cargando{
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
